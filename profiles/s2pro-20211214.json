@@ -1,0 +1,88 @@
+{
+  "id": "s2pro-20211214",
+  "properties": {
+    "ro.product.model": "SuperBOX_S2PRO",
+    "ro.build.display.id": "SuperBOX_S2PRO.20211214.V1.2.0",
+    "ro.build.version.release": "9",
+    "ro.build.version.sdk": "28"
+  },
+  "evidence": "One reference device; the presence of a model or package name alone is not a malware verdict. Only exact artifact hashes qualify for automatic quarantine.",
+  "artifacts": [
+    {
+      "path": "/system/priv-app/Door/base.apk",
+      "sha256": "78fb05a1970c5ca05c95a25ed769d4197c627fb4cd5448de7d84fb248e80296f",
+      "classification": "observed_persistence",
+      "size": 101808
+    },
+    {
+      "path": "/system/priv-app/Notes/base.apk",
+      "sha256": "6f9fe54eb59cfdf05438860d61dbbf35f70179ea9d4362c717334bee19fb7b88",
+      "classification": "observed_persistence",
+      "size": 61321
+    },
+    {
+      "path": "/system/bin/.netd_helper",
+      "sha256": "0d2def21d52a57c03566308ff276d5420902f3aa3ede9e6435d09f41626d9109",
+      "classification": "observed_persistence",
+      "size": 899
+    },
+    {
+      "path": "/system/bin/.w",
+      "sha256": "82ffa97831e1b6f17a563691e7a0f0c1f53ff112a6273b79c1b8c9e79586aa8a",
+      "classification": "observed_persistence",
+      "size": 82244
+    },
+    {
+      "path": "/system/bin/bootanimation",
+      "sha256": "bf846a73471a03cafbc95ce41cb94c49b6321c0981c67a7f77691793291f9ffb",
+      "classification": "suspicious_boot_replacement",
+      "size": 3032796
+    },
+    {
+      "path": "/system/bin/bootanimation1",
+      "sha256": "933eb9217fbb2990f34030db4b4cfe663ac56b38c3b432f042e2a3c256114ee6",
+      "classification": "suspicious_boot_replacement",
+      "size": 840296
+    },
+    {
+      "path": "/system/bin/lol",
+      "sha256": "90e3b997161e33c6485b48182073a864dd3d0775ab96cadbf1b7c9dd4821c6d1",
+      "classification": "observed_persistence",
+      "size": 128592
+    },
+    {
+      "path": "/system/bin/lol1",
+      "sha256": "c3788d92bfc3a08dbcca4476832c46b099bcad182c56cdbccf837eb0edb6cd77",
+      "classification": "observed_persistence",
+      "size": 113248
+    },
+    {
+      "path": "/system/bin/lol2",
+      "sha256": "9c531d10f5027968464b5aa251adad4a54a77be1774c507c73e501c202fa258b",
+      "classification": "observed_persistence",
+      "size": 563304
+    },
+    {
+      "path": "/system/etc/bootington.sh",
+      "sha256": "e8973f2155b1a57fb9bc3ed748fc4806b0aad46ddcb72b091392bc684aaa7b29",
+      "classification": "observed_persistence",
+      "size": 293
+    },
+    {
+      "path": "/system/etc/init/lolz.rc",
+      "sha256": "dbd4f349bb1b592335a445eaad874dbb5c922d914a25c0f3438311d099a34a97",
+      "classification": "observed_persistence",
+      "size": 832
+    },
+    {
+      "path": "/system/etc/init/turbovpn.rc",
+      "sha256": "452728f2b25d46911e8ac23ca6b87765c6a916cf30ca1958f8b0fba111da425a",
+      "classification": "observed_persistence",
+      "size": 133
+    }
+  ],
+  "payload_hashes": [
+    "43c57482e09586969c053d978db94cfba145e4b567afccccac07ef53ea494849",
+    "43c57482e09586969c053d978db94cfba145e4b567afccccac07ef53ea494849"
+  ]
+}

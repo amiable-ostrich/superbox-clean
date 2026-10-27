@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.venv/
+.coverage
+.pytest_cache/
+# Device output must live outside the checkout, even when ignored.
+state/
+backups/
+evidence/
+local/
+*.apk
+*.elf
+*.tar
+*.tar.gz
+*.zip
+*.png
+*.pcap
+*.pcapng
+adbkey*
+*.pem
+*.p12
