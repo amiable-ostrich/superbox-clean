@@ -19,6 +19,12 @@ Changing `su` permissions alone did not persist. The final manual setup quaranti
 
 Chrome was the only WebView provider. Its package was retained, with browser entry activities disabled. Removing it outright could break retained apps. Both streaming apps include native components; Blue VOD includes P2P libraries. Those were not fully reverse engineered or certified free of unwanted traffic.
 
+## Follow-up: additional qw root broker
+
+On 2026-11-11, another root broker named `qw` was investigated on the same reference firmware. A controlled application-UID diagnostic demonstrated that a caller-controlled factory-test process name could obtain root. This was classified as an unsafe privileged helper, not attributed to the quarantined bot malware. It was subsequently stopped and quarantined with its startup file; absence, maintenance access, existing protections and sampled streaming playback were verified after reboot.
+
+See [qw findings and manual remediation](QW.md) for exact artifact hashes, test limitations, dependency evidence and the automation boundary. The existing malware profile and root-tool removal script do not handle qw.
+
 ## External primary research
 
 - [Plume: When Your TV Box Becomes Someone Else's Gateway](https://www.plume.com/newsroom/when-your-tv-box-becomes-someone-elses-gateway) — Superbox proxy behavior and insecure local interfaces.

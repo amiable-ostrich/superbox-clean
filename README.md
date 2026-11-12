@@ -27,7 +27,7 @@ Only byte-identical artifacts from the reference investigation qualify for autom
 ## What it includes
 
 - Network discovery, private inspection reports, offline plans, backup-verified quarantine, installation-policy lockdown, and readback helpers.
-- Narrow firewall rules, an automatic firewall rollback watchdog, ADB key-authentication checks, and optional removal of the app-accessible root daemon.
+- Narrow firewall rules, an automatic firewall rollback watchdog, ADB key-authentication checks, and optional removal of the original app-accessible root tools. A [separate qw root broker](docs/QW.md) was later found and manually quarantined; the included helpers do not remove it.
 - [SETUP.md](SETUP.md): agent runbook, app preservation, reboot/playback checks, and recovery.
 - [Reference evidence](docs/REFERENCE.md), synthetic regression tests, CI, and `SHA256SUMS` for the included helpers.
 

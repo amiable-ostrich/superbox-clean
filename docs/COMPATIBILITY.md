@@ -17,6 +17,10 @@ The reference firmware reported security patch `2019-02-05`. Those version field
 
 Reference mutations assume a writable/remountable **system-as-root ext4 `/`** layout, Android init `.rc` files, and the Android 9 command set. A successful `adb connect` or matching product name does not validate these assumptions. The agent must inspect mounts/tools before any mutation.
 
+## Additional reference-firmware finding
+
+The reference firmware also contained a separate `qw` root broker with a demonstrated authorization weakness. Its [investigation, exact hashes and manual removal results](QW.md) were recorded after the initial cleanup. The current automatic malware profile and `runtime/remove-app-root.sh` do **not** remove qw; no additional model or automated mutation support is implied.
+
 ## Other versions
 
 Discovery and inspection are intended to work with other Android-based boxes that expose an authorized ADB connection. They have not been tested on other Superbox hardware. The included diagnostic parser expects Android `getprop`, `pm`, `ps`, `sha256sum`, `dumpsys user`, and `dumpsys webviewupdate`. If these are unavailable, the helper stops and the agent must adapt the **read-only** audit. It must not silently continue with an empty inventory.

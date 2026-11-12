@@ -209,6 +209,8 @@ It moves the tools into a separate root-only directory, replaces their startup s
 
 Return ADB to its normal shell UID with `adb unroot` when privileged verification is finished. The authorized key can still request root maintenance later, so protect it.
 
+**Additional root brokers:** removing these familiar tools does not establish that app-accessible root is gone. A later investigation on this exact reference firmware found `/system/bin/qw`, started as root by `/system/etc/init/qw.rc`, with an unsafe factory-test authorization path. Neither this script nor the automatic malware profile handles it. Read [the qw investigation and manually verified remediation](docs/QW.md), inspect active services/process executables, and plan any additional removal separately with exact hashes, verified backups and recovery access. Unknown variants require fresh analysis; do not infer that a rejected ordinary-shell invocation proves the broker safe.
+
 ## 10. Final acceptance
 
 Reboot, then make a fresh private audit/verification (use root diagnostics only through the authenticated maintenance channel if required):
